@@ -1,5 +1,6 @@
 name: Test
 on: push
+concurrency: test
 env:
   TEST_MONGO_URI: ${{ secrets.TEST_MONGO_URI }}
 jobs:
