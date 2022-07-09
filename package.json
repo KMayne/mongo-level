@@ -1,7 +1,15 @@
 {
   "name": "mongo-level",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rewrite of the mongodown project that uses the new abstract-level library.",
+  "homepage": "https://github.com/KMayne/mongo-level#readme",
+  "bugs": {
+    "url": "https://github.com/KMayne/mongo-level/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KMayne/mongo-level.git"
+  },
   "main": "lib/mongo-level.js",
   "types": "lib/mongo-level.d.ts",
   "scripts": {
