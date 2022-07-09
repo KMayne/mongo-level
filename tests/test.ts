@@ -31,4 +31,5 @@ cleanupCollections().then(() => {
       return new MongoLevel('mongo-level-test-' + randString(), { ...options, mongoUri: process.env.TEST_MONGO_URI });
     }
   });
+  test('End tests', _ => { throw('Workaround for hanging tests'); });
 });
