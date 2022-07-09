@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# if test -f "ran-init"; then
-#   echo "*** Already ran initial setup - skipping ***"
-#   exit 0
-# fi
+if test -f "ran-init"; then
+  echo "*** Already ran initial setup - skipping ***"
+  exit 0
+fi
 
 echo "*** Running initial setup ***"
 
