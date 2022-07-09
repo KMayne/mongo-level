@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongo-server:
+    container_name: mongo-server
+    image: mongo:4.4
+    volumes:
+      - ./data:/data/db
+    networks:
+      - mongors-network
+    ports:
+      - 27017:27017
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs" ]
+  mongo_init:
+    container_name: mongo_init
+    image: mongo:4.4
+    volumes:
+      - ./mongors-init.sh:/scripts/mongors-init.sh
+    networks:
+      - mongors-network
+    restart: "on-failure"
+    entrypoint: "/scripts/mongors-init.sh"
+
+networks:
+  mongors-network:
+    driver: bridge

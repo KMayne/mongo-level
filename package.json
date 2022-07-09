@@ -1,0 +1,43 @@
+{
+  "name": "mongo-level",
+  "version": "1.0.0",
+  "description": "A rewrite of the mongodown project that uses the new abstract-level library.",
+  "main": "lib/mongo-level.js",
+  "types": "lib/mongo-level.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node tests/test.ts",
+    "test-summary": "npm test | tap-summary",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [
+    "leveldb",
+    "level",
+    "leveldown",
+    "mongodb",
+    "mongo",
+    "abstract-level"
+  ],
+  "author": "Kian Mayne",
+  "license": "MIT",
+  "dependencies": {
+    "abstract-level": "^1.0.3",
+    "module-error": "^1.0.2",
+    "mongodb": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/tape": "^4.13.2",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.18.0",
+    "prettier": "^2.7.1",
+    "tap-summary": "^4.0.0",
+    "tape": "^5.5.3",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.7.4"
+  }
+}
