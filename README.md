@@ -11,3 +11,5 @@ docker compose up
 echo 'TEST_MONGO_URI=mongodb://test-user:test-pass@127.0.0.1:27017/mongo-level-test?replicaSet=dbrs' > .env
 npm run test
 ```
+
+For now, I have no plans to work on this further. I was originally going to use this to connect `yjs` to a MongoDB instance but the [y-LevelDb](https://github.com/yjs/y-leveldb) adapter is not compatible with LevelDB 8 and I didn't want to re-write that as well.
